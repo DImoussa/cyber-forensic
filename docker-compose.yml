@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  investigation-toolbox:
+    container_name: investigation-toolbox
+    image: debian:12
+    tty: true
+    networks:
+      - forensic
+    volumes:
+      - ./scripts:/home/scripts
+      - ./files:/home/investigation-files
+networks:
+  forensic:
